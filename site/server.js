@@ -55,8 +55,8 @@ if (process.env.BINDING) {
     credentials = JSON.parse(process.env.BINDING);
 }
 
-// This check ensures there is a services for Etcd databases
-assert(!util.isUndefined(credentials), "Must be bound to databases-for-etcd services");
+// // This check ensures there is a services for Etcd databases
+// assert(!util.isUndefined(credentials), "Must be bound to databases-for-etcd services");
 
 // We now take the first bound Etcd service and extract it's credentials object
 var etcdConn = credentials.connection.grpc;
