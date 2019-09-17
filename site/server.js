@@ -46,6 +46,13 @@ app.get('/healthz', function(req, res) {
     res.send('OK!');
 });
 
+app.get('/health-check',(req,res)=> {
+ res.send ("Health check passed");
+});
+app.get('/bad-health',(req,res)=> {
+    res.status(500).send('Health check did not pass');
+});
+
 let credentials;
 
 // Retrieve the Kubernetes environment variables from BINDING in the clouddb-deployment.yaml file
