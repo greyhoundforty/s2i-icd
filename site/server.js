@@ -46,10 +46,11 @@ app.get('/healthz', function(req, res) {
     res.send('OK!');
 });
 
-app.get('/health-check',(req,res)=> {
+app.get('/health-check', function(req, res) {
  res.send ("Health check passed");
 });
-app.get('/bad-health',(req,res)=> {
+
+app.get('/bad-health', function(req, res) {
     res.status(500).send('Health check did not pass');
 });
 
